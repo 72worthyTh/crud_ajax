@@ -1,7 +1,7 @@
 <?php
 include('db.php');
 if($_POST['view']){?>
-<table class="table table-stripped table-bordered" id="table">
+<table class="table table-stripped table-bordered" id="example">
 <thead><th hidden></th><th>Code</th><th>nom</th><th>prenom</th><th>sexe</th><th>Email</th><th>age</th><th></th></thead>
 <tbody>
 <?php
@@ -15,7 +15,7 @@ while ($row=$sql->fetch()){?>
 <td><?=$row['sexe']?></td>
 <td><?=$row['email']?></td>
 <td><?=$row['age']?></td>
-<td><i class="fa fa-eye-open"></i></td>
+<td><i class="fa fa-pencil fa-fw"></i></td>
 </tr>
 
 <?php } ?>
@@ -23,5 +23,5 @@ while ($row=$sql->fetch()){?>
 </table>
 <?php } ?>
 <script>
-$('#table').DataTable();
+   $('#example').DataTable();
 </script>
